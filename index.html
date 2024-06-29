@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Mini App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="menu">
+            <div class="item">
+                <div id="root"></div>
+            </div>
+        </div>
+        <div class="order">
+            <button onclick="check_on_click_payment()">Pay with QR</button>
+        </div>
+        <div id="qr-code"></div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module">
+        import { check_on_click_payment } from './sol_qr_payment.js';
+
+        window.check_on_click_payment = check_on_click_payment; // Делает функцию доступной глобально
+    </script>
+    <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>
